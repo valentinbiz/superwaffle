@@ -17,7 +17,7 @@ export default class SortingVisualiser extends React.Component {
 
       this.state = {
         array: [],
-        defaultValue: 19,
+        defaultValue: 12,
         data: Data,
         cardIndex: 0
       };
@@ -40,7 +40,7 @@ export default class SortingVisualiser extends React.Component {
       const width = document.getElementById('main').clientWidth / this.state.defaultValue;
       for (let i = 0; i < width; i++) {
         array.splice(0, array.length, ...(new Set(array)));
-        let randInt = randomIntFromInterval(20, height / 1.2);
+        let randInt = randomIntFromInterval(50, height / 1.05);
         if (array.indexOf(randInt) === -1) {
           array.push(randInt)
         }
@@ -91,7 +91,9 @@ export default class SortingVisualiser extends React.Component {
             <header> VisualSort</header>
               <left-section>
                 <div className="left-container" >
-                  <Card key={Data.key} data={Data} cardIndex= {this.state.cardIndex}  />
+                  <div className="card-container">
+                    <Card key={Data.key} data={Data} cardIndex= {this.state.cardIndex}  />
+                  </div>
                 </div>
               </left-section>
               <main-section id="main">
@@ -133,10 +135,10 @@ export default class SortingVisualiser extends React.Component {
                             className="sliders-bar"
                             id="typeinp" 
                             type="range" 
-                            min="8" max="32" 
+                            min="6" max="48" 
                             value={this.state.value} 
                             onChange={this.handleChange}
-                            step="2"/>
+                            step="3"/>
                             <img src="https://img.icons8.com/material-outlined/22/000000/mouse-animal.png" alt=''/>
                       </div>
                     </div>

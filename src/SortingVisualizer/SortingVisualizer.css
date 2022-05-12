@@ -55,8 +55,8 @@ right-section {
     margin: auto;
     border: 5px;
     padding: 10px;
-    width: 100%;
-    height: 500px;
+    width: 90%;
+    height: 50vh;
     border-radius: 30px;
     color: #2d2e2d;
     justify-content: flex-end;
@@ -66,20 +66,32 @@ right-section {
 }
 
 .left-container {
-    font-size: 1.8vh;
     bottom: 5px;
     margin: auto;
-    margin-right: 5%;
+    margin-right: 7%;
     border: 5px;
     padding: 10px;
-    width: 90%;
+    width: 85%;
+
+    height: 50vh;
+    border-radius: 30px;
+    /* background: #d1cdc9;
+    color: #2d2e2d; */
+    justify-content: flex-end;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.5s;
+}
+.card-container {
+    font-size: max(1.7vh, 2px);
+    width: 100%;
+    /* margin-top: 5%; */
+    /* border: 5px; */
+    padding: 10px;
     height: 50vh;
     border-radius: 30px;
     background: #d1cdc9;
     color: #2d2e2d;
-    justify-content: flex-end;
-    flex-direction: column;
-    align-items: center;
     transition: all 0.5s;
 }
 
@@ -119,7 +131,7 @@ main-section {
     margin: 10px 2px;
     align-self: flex-end;
     border-radius: 5px;
-    transition: all 0.5s;
+    transition: all 0.05s;
 }
 
 button {
@@ -134,7 +146,6 @@ button {
     color: #000000;
     text-shadow: 0 0.04em 0.04em rgba(0, 0, 0, 0.35);
     text-align: center;
-    transition: all 0.5s;
 }
 
 a:link,
