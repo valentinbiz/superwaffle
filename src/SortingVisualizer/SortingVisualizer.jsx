@@ -5,6 +5,8 @@ import { bubbleSort } from "../SortingAlgos/BubbleSort";
 import { selectionSort } from "../SortingAlgos/SelectionSort";
 import { insertionSort } from "../SortingAlgos/InsertionSort";
 
+import Icon from "../icon.svg";
+
 import Data from "./Data";
 import Card from "./Card";
 
@@ -17,7 +19,7 @@ export default class SortingVisualiser extends React.Component {
 
       this.state = {
         array: [],
-        defaultValue: 12,
+        defaultValue: 25,
         data: Data,
         cardIndex: 0
       };
@@ -40,7 +42,7 @@ export default class SortingVisualiser extends React.Component {
       const width = document.getElementById('main').clientWidth / this.state.defaultValue;
       for (let i = 0; i < width; i++) {
         array.splice(0, array.length, ...(new Set(array)));
-        let randInt = randomIntFromInterval(50, height / 1.05);
+        let randInt = randomIntFromInterval(10, height / 1.05);
         if (array.indexOf(randInt) === -1) {
           array.push(randInt)
         }
@@ -88,7 +90,12 @@ export default class SortingVisualiser extends React.Component {
         
         return (
           <div className="project-container">
-            <header> VisualSort</header>
+            <header> 
+            <div className="title">VisualSort</div>
+            <div className="icon">
+              
+            </div>
+            </header>
               <left-section>
                 <div className="left-container" >
                   <div className="card-container">
@@ -112,9 +119,9 @@ export default class SortingVisualiser extends React.Component {
                   <button onClick={() => window.location.reload()} className="new-arraybtn">Reset Array</button>
                 </div>
                   <div className="sliders">
-                    <h5>Visualiser Settings:</h5>
+                    <h4>Visualiser Settings:</h4>
                       <br/>
-                      <div>
+                      <div className="">
                         <h6>Speed</h6> 
                         <div className="speed-container">
                           <img src="https://img.icons8.com/windows/24/000000/turtle.png" alt=''/>
@@ -166,7 +173,7 @@ function animateAlgorithm(animations, speed) {
       const [barOneIdx, barTwoIdx] = animations[i];
       const barOneStyle = arrayBars[barOneIdx].style;
       const barTwoStyle = arrayBars[barTwoIdx].style;
-      const color = i % 3 === 0 ? "#c67561" : " #e3e5e0";
+      const color = i % 3 === 0 ? "red" : " #e3e5e0";
       setTimeout(() => {
         barOneStyle.backgroundColor = color;
         barTwoStyle.backgroundColor = color;

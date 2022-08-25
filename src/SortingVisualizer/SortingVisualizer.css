@@ -9,7 +9,6 @@ html {
     width: 100vw;
     height: 100vh;
     background-color: #676767;
-    font-family: 'Source Code Pro', monospace;
 }
 
 .project-container {
@@ -20,7 +19,7 @@ html {
     grid-template-columns: 20% 60% 20%;
     grid-template-rows: 20% 70% 10%;
     grid-template-areas:
-        "header header header"
+        "left-section header right-section"
         "left-section main-section right-section "
         "footer footer footer"
 }
@@ -30,78 +29,63 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 50px;
+    font-size: 4rem;
     color: #0a0a0a;
+    font-style: normal;
 }
 
 left-section {
     grid-area: left-section;
     display: flex;
-    align-items: flex-end;
     align-items: center;
+    text-align: justify;
 }
 
 right-section {
     grid-area: right-section;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: center;
+}
+
+.icon{
+    height: 30px;
+    width: 30px;
 }
 
 .right-container {
-    font-size: 1.8vh;
-    bottom: 5px;
-    margin: auto;
-    border: 5px;
+    margin: 0 5% 0 5%;
     padding: 10px;
-    width: 90%;
-    height: 50vh;
-    border-radius: 30px;
+    width: 100%;
     color: #2d2e2d;
-    justify-content: flex-end;
-    display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
 
 .left-container {
     bottom: 5px;
-    margin: auto;
-    margin-right: 7%;
-    border: 5px;
+    margin: 0 5% 0 5%;
     padding: 10px;
-    width: 85%;
-
-    height: 50vh;
-    border-radius: 30px;
-    /* background: #d1cdc9;
-    color: #2d2e2d; */
-    justify-content: flex-end;
-    flex-direction: column;
-    align-items: center;
+    width: 100%;
+    justify-content: center;
     transition: all 0.5s;
 }
 .card-container {
-    font-size: max(1.7vh, 2px);
-    width: 100%;
-    /* margin-top: 5%; */
-    /* border: 5px; */
+    font-size: 1rem;
     padding: 10px;
-    height: 50vh;
-    border-radius: 30px;
+    height: fit-content;
+    border-radius: 10px;
     background: #d1cdc9;
     color: #2d2e2d;
     transition: all 0.5s;
 }
 
 .sliders {
-    width: 95%;
-    margin-top: 5%;
-    /* border: 5px; */
+
+    margin-top: 10px;
     padding: 10px;
-    height: 25vh;
-    border-radius: 30px;
+    height: fit-content;
+    border-radius: 10px;
     background: #d1cdc9;
     color: #2d2e2d;
     transition: all 0.5s;
@@ -109,12 +93,16 @@ right-section {
 
 .sliders-bar {
     direction: rtl;
+    display: flex;
+    width: fit-content;
+
 }
 
 .speed-container {
     height: 50px;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 
@@ -126,7 +114,7 @@ main-section {
 
 .array-bar {
     width: 100px;
-    background-color: #252626;
+    background-color: #222222;
     display: inline-block;
     margin: 10px 2px;
     align-self: flex-end;
@@ -135,17 +123,20 @@ main-section {
 }
 
 button {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
     background: #d1cdc9;
-    width: 90%;
+    width: 100%;
     padding: 3% 3%;
-    margin: 5px;
+    margin-bottom: 10px;
     border: solid rgba(255, 255, 255, 0);
-    border-radius: 2em;
-    font-family: 'Source Code Pro', monospace;
-    font-size: 1.8vh;
-    color: #000000;
-    text-shadow: 0 0.04em 0.04em rgba(0, 0, 0, 0.35);
+    border-radius: 10px;
+    font-size: 1rem;
     text-align: center;
+}
+h5{
+    margin-top: -10px;
+    font-size: 1rem;
 }
 
 a:link,
