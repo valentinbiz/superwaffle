@@ -1,17 +1,21 @@
 # Sorting Algorithms Visualiser
 
+### Live version of the app: 
+#### https://visualgosort.netlify.app/
+
 ### Application created to assist with understanding how some sorting algorithms work.
+![plot](./public/image.png)
 
 ### Currently comprises of 4 algorithms:
-#### Bubble Sort
-#### Insertion Sort
-#### Selection Sort
-#### Merge Sort
+#### - Bubble Sort
+#### - Insertion Sort
+#### - Selection Sort
+#### - Merge Sort
 
 ### Algorithms that will be implemented in the near future:
 
-#### Quick Sort
-#### Radix Sort
+#### - Quick Sort
+#### - Radix Sort
 
 ### Application created using React. Feel free to fork it and make your own version of it!
 
